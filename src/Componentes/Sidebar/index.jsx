@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getAnimesCategorias } from "../../Services/query";
 import { FaListUl } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
-import { Link } from "react-router-dom";
+
 import {
   Close,
   ContentLista,
@@ -11,6 +11,7 @@ import {
   Menu,
   Paragrafo,
   SidBar,
+  StyledLink,
 } from "./styles";
 
 function Sidebar({ setValorClick }) {
@@ -23,7 +24,6 @@ function Sidebar({ setValorClick }) {
   useEffect(() => {
     async function loadProducts() {
       const res = await getAnimesCategorias();
-
       setProducts(res.data);
     }
 
@@ -53,16 +53,16 @@ function Sidebar({ setValorClick }) {
 
             {products?.map((product) => (
               <Paragrafo key={product?.id}>
-                <Link
+                <StyledLink
                   to={`/Categorias/${product.id}`}
                   onClick={() => ClickDoUsuario(product)}
                 >
                   <List>{product?.attributes?.title}</List>
-                </Link>
+                </StyledLink>
               </Paragrafo>
             ))}
             <Paragrafo>
-              <Link to={`/TodosAnimes`}>Todos</Link>
+              <StyledLink to={`/TodosAnimes`}>Todos</StyledLink>
             </Paragrafo>
           </div>
         </ContentLista>

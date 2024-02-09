@@ -19,7 +19,7 @@ export const ContentSearch = styled.div`
   }
 `;
 export const Contenthome = styled.div`
-  height: 100vh;
+  height: 40vh;
 `;
 
 export const Inicio = styled.h3`

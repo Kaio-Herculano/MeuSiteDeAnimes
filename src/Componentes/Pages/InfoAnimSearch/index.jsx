@@ -63,8 +63,6 @@ const AnimeInfoSearch = () => {
                   <IoIosCloseCircleOutline />
                 </Deletemodal>
                 <iframe
-                  width="1236"
-                  height="695"
                   src={`https://www.youtube.com/embed/${especifcAnim?.attributes?.youtubeVideoId}`}
                   title="Lady GaGa - Judas (  Gemyni Cover + Slowed Reverb )"
                   frameborder="0"

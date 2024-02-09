@@ -21,6 +21,8 @@ export const Title = styled.h1`
   align-items: center;
   @media (max-width: 800px) {
     width: 95%;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -31,6 +33,8 @@ export const Imgs = styled.h1`
   gap: 40px;
   justify-content: center;
   color: darkorange;
+  text-decoration: none;
+  outline: none;
 
   @media (max-width: 800px) {
     display: flex;

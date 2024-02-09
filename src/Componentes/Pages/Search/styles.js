@@ -4,12 +4,13 @@ export const LogoAnimes = styled.h1`
   color: #49cd34;
   display: flex;
   font-size: 40px;
-
+  text-decoration: none;
+  outline: none;
+  height: 0;
   @media (max-width: 800px) {
     width: 55%;
   }
 `;
-
 export const ApiResult = styled.div`
   height: 100vh;
   background-color: #473c3c;
