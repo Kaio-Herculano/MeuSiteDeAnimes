@@ -20,6 +20,9 @@ export const ContentSearch = styled.div`
 `;
 export const Contenthome = styled.div`
   height: 40vh;
+  @media (max-width: 800px) {
+    height: 70vh;
+  }
 `;
 
 export const Inicio = styled.h3`

@@ -46,52 +46,52 @@ const Categorias = (categoryValue) => {
   return (
     <>
       {animeEspecifico ? (
-        <>
-          <Title>
-            <Popcorn>
-              <GiPopcorn />
-            </Popcorn>{" "}
-            Sobre o seu anime....
-          </Title>
-          <ImgHeader
-            src={
-              animeEspecifico.attributes?.coverImage?.tiny === null
-                ? "notFoud"
-                : animeEspecifico.attributes?.coverImage?.small
-            }
-          />
-          <ImgInfo>
-            <img src={animeEspecifico.attributes?.posterImage?.medium} alt="" />
-            <h2>{animeEspecifico.attributes?.canonicalTitle}</h2>
-            <SobreAnime>{animeEspecifico.attributes?.synopsis}</SobreAnime>
-          </ImgInfo>
+    <>
+    <Title>
+      <Popcorn>
+        <GiPopcorn />
+      </Popcorn>{" "}
+      Sobre o seu anime....
+    </Title>
+    <ImgHeader
+      src={
+        animeEspecifico?.attributes?.coverImage?.tiny === null
+          ? "notFoud"
+          : animeEspecifico?.attributes?.coverImage?.small
+      }
+    />
 
-          <Trailer>
-            <TrailerButoon onClick={() => setModal(true)}>
-              <SiNetflix /> VER TRAILER
-            </TrailerButoon>
-            {modal && (
-              <Backshadow>
-                <div>
-                  <div>
-                    <Deletemodal onClick={() => setModal(false)}>
-                      <IoIosCloseCircleOutline />
-                    </Deletemodal>
-                    <iframe
-                      width="1236"
-                      height="695"
-                      src={`https://www.youtube.com/embed/${animeEspecifico?.attributes?.youtubeVideoId}`}
-                      title="Lady GaGa - Judas (  Gemyni Cover + Slowed Reverb )"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                </div>
-              </Backshadow>
-            )}
-          </Trailer>
-        </>
+    <ImgInfo>
+      <img src={animeEspecifico?.attributes?.posterImage.medium} alt="" />
+      <h2>{animeEspecifico?.attributes?.canonicalTitle}</h2>
+      <SobreAnime>{animeEspecifico?.attributes?.synopsis}</SobreAnime>
+    </ImgInfo>
+
+    <Trailer>
+      <TrailerButoon onClick={() => setModal(true)}>
+        <SiNetflix /> VER TRAILER
+      </TrailerButoon>
+
+      {modal && (
+        <Backshadow>
+          <div>
+            <div>
+              <Deletemodal onClick={() => setModal(false)}>
+                <IoIosCloseCircleOutline />
+              </Deletemodal>
+              <iframe
+                src={`https://www.youtube.com/embed/${animeEspecifico?.attributes?.youtubeVideoId}`}
+                title="Lady GaGa - Judas (  Gemyni Cover + Slowed Reverb )"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </Backshadow>
+      )}
+    </Trailer>
+  </>
       ) : (
         <Container>
           <Title>

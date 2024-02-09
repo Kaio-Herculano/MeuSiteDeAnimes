@@ -60,14 +60,14 @@ function Categorias() {
       </Title>
       <ImgHeader
         src={
-          data.attributes?.coverImage?.tiny === null
+          data?.attributes?.coverImage?.tiny === null
             ? "notFoud"
-            : data.attributes?.coverImage?.small
+            : data?.attributes?.coverImage?.small
         }
       />
 
       <ImgInfo>
-        <img src={data.attributes?.posterImage.medium} alt="" />
+        <img src={data?.attributes?.posterImage.medium} alt="" />
         <h2>{data?.attributes?.canonicalTitle}</h2>
         <SobreAnime>{data?.attributes?.synopsis}</SobreAnime>
       </ImgInfo>
@@ -85,8 +85,6 @@ function Categorias() {
                   <IoIosCloseCircleOutline />
                 </Deletemodal>
                 <iframe
-                  width="1236"
-                  height="695"
                   src={`https://www.youtube.com/embed/${animeEspecifico?.attributes?.youtubeVideoId}`}
                   title="Lady GaGa - Judas (  Gemyni Cover + Slowed Reverb )"
                   frameborder="0"

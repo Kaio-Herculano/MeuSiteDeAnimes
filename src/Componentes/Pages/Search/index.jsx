@@ -5,12 +5,10 @@ import { getSearchAnimes } from "../../../Services/query";
 import { Popcorn } from "../PagTodos/styles";
 import { Link } from "react-router-dom";
 
-const Search = ({ valueAnimes, valueEspecific,  }) => {
+const Search = ({ valueAnimes, valueEspecific }) => {
   const [products, setProducts] = useState([]);
 
-  const clickDoUsuario = (item) => {
-
-  };
+  const clickDoUsuario = (item) => {};
 
   useEffect(() => {
     async function loadProducts() {
