@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const ContentLista = styled.div`
@@ -36,14 +37,13 @@ export const Close = styled.div`
   cursor: pointer;
 `;
 export const Paragrafo = styled.div`
-  font-size: 15px;
-  height: 10px;
-
-  @media (max-width: 1600px) {
-    font-size: 14px;
-    height: 5px;
-    margin-left: 25px;
-    margin-top: 10px;
+  font-size: 14px;
+  height: 5px;
+  margin-left: 23px;
+  margin-top: 10px;
+  width: 30%;
+  @media (max-width: 800px) {
+    width: 100%;
   }
 `;
 
@@ -72,4 +72,10 @@ export const List = styled.div`
   outline: none;
   text-decoration: none;
   color: white;
+`;
+
+
+export const StyledLink = styled(Link)`
+  text-decoration: none; 
+  color: inherit; 
 `;

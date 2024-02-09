@@ -101,9 +101,11 @@ const Categorias = (categoryValue) => {
             <p>{categoryValue?.categoryValue?.attributes?.slug}</p>
           </Title>
           <Imgs>
+           
             {animes?.map((item) => (
               <Link key={item.id} onClick={() => setAnimeEspecifico(item)}>
-                <img
+                <img 
+             
                   src={item.attributes?.posterImage?.small}
                   alt={item.titles}
                 />
