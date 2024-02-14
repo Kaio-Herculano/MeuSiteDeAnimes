@@ -9,6 +9,7 @@ export const ContentLista = styled.div`
 
   @media (max-width: 800px) {
     width: 35%;
+    z-index: 1;
   }
 `;
 
@@ -74,8 +75,7 @@ export const List = styled.div`
   color: white;
 `;
 
-
 export const StyledLink = styled(Link)`
-  text-decoration: none; 
-  color: inherit; 
+  text-decoration: none;
+  color: inherit;
 `;

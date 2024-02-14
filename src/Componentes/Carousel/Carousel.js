@@ -8,7 +8,7 @@ const CarouselCard = styled.div`
   flex: 1;
   position: absolute;
   width: 75%;
-  height: 26%;
+  height: 25%;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.15);
@@ -47,7 +47,7 @@ const CardOverlay = styled.div`
   padding: 10px 0px;
   margin-top: 9%;
   @media (max-width: 800px) {
-    margin-top: 85px;
+    margin-top: 60px;
   }
 `;
 
@@ -62,6 +62,9 @@ const CarouselPagination = styled.div`
   left: 50%;
   transform: translate(-50%, 0);
   margin-top: 15%;
+  @media (max-width: 800px) {
+    margin-top: 55%;
+  }
 `;
 
 const PaginationDot = styled.div`
@@ -89,7 +92,6 @@ function Carousel({ images }) {
 
   useEffect(() => {
     timeOut =
-
       autoPlay &&
       setTimeout(() => {
         slideRight();

@@ -16,6 +16,12 @@ export const TestImg = styled.div`
   justify-content: flex-end;
   justify-content: center;
   @media (max-width: 800px) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
   }
 `;

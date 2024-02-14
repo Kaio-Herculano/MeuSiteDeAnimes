@@ -7,6 +7,7 @@ const Container = styled.div`
   color: white;
   margin: -8px;
   background-color: #473c3c;
+  padding: 1px;
 `;
 
 const Footer = styled.h1`

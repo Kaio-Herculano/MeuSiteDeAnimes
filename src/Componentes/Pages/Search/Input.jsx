@@ -28,7 +28,7 @@ const Input = ({ valueAnimes, setValueAnimes }) => {
               <GiLaurelCrown />
             </LogoHome>
           </Link>{" "}
-          Kaio animes{" "}
+          ksh animes{" "}
         </LogoAnimes>
         <BarraBusca>
           <form onSubmit={(e) => handleSubmit(e)}>
@@ -39,9 +39,6 @@ const Input = ({ valueAnimes, setValueAnimes }) => {
                 onChange={(e) => setValueAnimes(e.target.value)}
                 value={valueAnimes}
               />
-              <Lupa type="submit">
-                <IoSearch />
-              </Lupa>
             </DivInput>
           </form>
         </BarraBusca>
